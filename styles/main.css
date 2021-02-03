@@ -26,10 +26,10 @@ body {
 /*                   HEADER                    */
 /* ------------------------------------------- */
 header h1 span {
-  font-family: monospace; font-size: 1.5em;
+  font-family: monospace;
+  font-size: 1.5em;
 }
 span {
-   
 }
 /* ------------------------------------------- */
 /*                   MAIN                      */
@@ -90,7 +90,7 @@ button {
 button:hover {
   background-color: rgb(65, 57, 145);
   cursor: pointer;
-  box-shadow: 3px 3px ;
+  box-shadow: 3px 3px;
 }
 button:focus {
   display: none;
