@@ -47,9 +47,26 @@ Ik heb onderzoek gedaan naar selectoren en toen heb ik een loginpage gemaakt daa
 
 Ik heb hier gebruik gemaakt en research gedaan naar de selectors **(parent selectors)** `:valid`, `:invalid`, `:focus-within` , maar ook pseudo selectors als `:hover`, `:focus` en pseudo elements als `:after`.
 
-Hierdoor kwam ik achter de kracht van CSS
+Hierdoor kwam ik achter de kracht van CSS.
 
+Screenshot van hoe het login scherm eruit zag:
 <img src="assets/kickoff/images/login-page.png" />
+
+## Concept eindbeoordeling
+Ik heb het het volgende concept bedacht:  
+Ik wil de HTML content van het menu pakken en daar een bepaalde huisstijl aan toevoegen. Mijn ideeen gaan nu uit naar een Swiss style design en die wil ik helemaal uitspitten en vervolgens wil ik de menu's op kaartjes weergeven en wanneer je er overheen hovert, dan draait hij om en zie je de ingrediënten erop staan. Overigens wil ik ook nog een soort functie aan kunnen zetten dat het van het rustige swiss design omtovert naar een erg druk design.
+
+Voor de layout en design heb ik een Pinterest bord gemaakt waarop ik al mijn ideëen pin: Dit bord is [hier](https://nl.pinterest.com/ralfzonneveld/css-to-the-rescue-design-research/) te vinden.
+
+De verschillende onderdelen wil ik op deze manier verwerken, dat als je op een gekleurde pagina drukt, dat hij dan zichbaar wordt (zie hieronder). ([Bron afbeelding](https://www.behance.net/gallery/61153051/One-Night-Only))
+<img src="https://i.pinimg.com/564x/a7/37/70/a73770947a4b5792d05752ec1d6553f5.jpg" width="400px">
+
+De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](https://davisonpro.dev/)):
+<img src="https://davisonpro.dev/wp-content/uploads/2019/09/Flipping-Card-HTML-CSS.gif"  width="400px">
+
+De eisen waar mijn product zich aan moet houden zijn:
+- SVG toepassen in shapes, masks én filters
+- Twee kleuren
 
 # Week 2
 # Week 3
