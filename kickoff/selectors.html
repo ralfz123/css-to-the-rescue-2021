@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/cheatsheet.css" />
+  <link rel="stylesheet" href="styles/selectors.css" />
+  <title>CSS selectors</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<aside class="cheatsheet">
+  <h2>Selector Cheatsheet</h2>
+  <ol id="list">
+    <li>:first-of-type</li>
+    <li>:last-of-type</li>
+    <hr/>
+    <li>:first-child</li>
+    <li>:last-child</li>
+    <hr/>
+    <li>:nth-child(4)</li>
+    <li>:nth-child(even)</li>
+    <li>:nth-child(odd)</li>
+    <li>:nth-child(3n)</li>
+    <li>:nth-child(3n + 2)</li>
+    <li>:nth-child(n + 5)</li>
+    <li>:nth-child(-n + 5)</li>
+    <li>:nth-last-child(n + 5)</li>
+    <li>:nth-last-child(-n + 5)</li>
+  </ol>
+</aside>
+<main>
+  <h1>Exercises</h1>
+  <form>
+    <fieldset>
+      <legend>Which nth-element is used?</legend>
+
+      <div>
+        <div>
+          <ul id="q1">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+        </div>
+
+        <div class='answer-group'>
+          <div>
+            <label for="4">:nth-child(</label>
+            <input type="input" id='answer' name='answergroup' pattern="4n\+2" required autofocus autocomplete='off' placeholder='Answer'>
+            <label for="4">)</label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  <form>
+    <fieldset>
+      <legend>Which nth-element is used?</legend>
+
+      <div>
+        <div>
+          <ul id="q2">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+        </div>
+
+        <div class='answer-group'>
+          <div>
+            <label for="4">:nth-child(</label>
+            <input type="input" id='answer' name='answergroup' pattern="-n\+2" required autofocus autocomplete='off' placeholder='Answer'>
+            <label for="4">)</label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</main>
+</body>
+<script src="scripts/script.js"></script>
+</html>

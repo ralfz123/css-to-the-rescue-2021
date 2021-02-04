@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login | CSS selectors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>A CSS experiment about <span>selectors</span></h1>
+    </header>
+
+    <main>
+      <form action="selectors.html">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="johndoe@gmail.com"
+          required
+        />
+
+        <label id="password">Password (min. 6 characters)</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="xxxxxxxx"
+          minlength="6"
+          required
+        />
+
+        <button type="submit">Login</button>
+
+        <p data-descr="⚠️ You must first enter a correct e-mail and password.">
+          ℹ Info
+        </p>
+
+        <p>ℹ Info 2</p>
+
+        <div>⚠️ You must first enter a correct e-mail and password.</div>
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        Made by
+        <a href="https://github.com/sjagoori" target="_blank"
+          >Shabier Jagoori</a
+        >
+        &&
+        <a href="https://github.com/sjorswijsman" target="_blank"
+          >Sjors Wijsman</a
+        >
+        &&
+        <a href="https://github.com/ralfz123" target="_blank">Ralf Zonneveld</a>
+      </p>
+    </footer>
+  </body>
+</html>
