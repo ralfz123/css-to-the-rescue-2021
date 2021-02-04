@@ -7,9 +7,9 @@
     <tr>
         <td align="center"><a href="#rocket-purpose-of-project">🚀 Purpose of Project<a></td>
         <td align="center"><a href="#week-1">Week 1 👋<a></td>
-        <td align="center"><a href="#week-1">Week 2 💻<a></td>
-        <td align="center"><a href="#week-1">Week 3 💻<a></td>
-        <td align="center"><a href="#week-1">Week 4 🚨<a></td>
+        <td align="center"><a href="#week-2">Week 2 💻<a></td>
+        <td align="center"><a href="#week-3">Week 3 💻<a></td>
+        <td align="center"><a href="#week-4">Week 4 🚨<a></td>
         <td align="center"><a href="#gear-installation">⚙️ Installation<a></td>
         <td align="center"><a href="#file_folder-sources">📁 Sources<a></td>
         <td align="center"><a href="#cop-license">👮 License<a></td>
