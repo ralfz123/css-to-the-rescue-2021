@@ -3,7 +3,7 @@
 # Week 1
 
 ## Kickoff
-Ik heb onderzoek gedaan naar selectoren en toen heb ik een loginpage gemaakt daarover. Die is [hier](https://ralfz123.github.io/css-to-the-rescue2021/kickoff) te vinden. Wanneer je ingelogd bent, zie je hetgeen wat Shabier en Sjors gemaakt hebben.
+Ik heb onderzoek gedaan naar selectoren en toen heb ik een loginpage gemaakt daarover. Die is [hier](https://ralfz123.github.io/css-to-the-rescue-2021/kickoff) te vinden. Wanneer je ingelogd bent, zie je hetgeen wat Shabier en Sjors gemaakt hebben.
 
 # Week 2
 # Week 3
