@@ -59,6 +59,7 @@ Ik wil de HTML content van het menu pakken en daar een bepaalde huisstijl aan to
 Voor de layout en design heb ik een Pinterest bord gemaakt waarop ik al mijn ideëen pin: Dit bord is [hier](https://nl.pinterest.com/ralfzonneveld/css-to-the-rescue-design-research/) te vinden.
 
 De verschillende onderdelen wil ik op deze manier verwerken, dat als je op een gekleurde pagina drukt, dat hij dan zichbaar wordt (zie hieronder). ([Bron afbeelding](https://www.behance.net/gallery/61153051/One-Night-Only))
+
 <img src="https://i.pinimg.com/564x/a7/37/70/a73770947a4b5792d05752ec1d6553f5.jpg" width="400px">
 
 De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](https://davisonpro.dev/)):
