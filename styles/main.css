@@ -2,13 +2,115 @@
 /*                     OVERALL                     */
 /* *********************************************** */
 
-/* *********************************************** */
-/*                     MAIN                        */
-/* *********************************************** */
+html,
+body {
+  --color-white: #f0f0f5;
+  --color-black: #1d1d21;
+  --color-black-light: #202026;
+  --color-red: crimson;
+  --color-green: hsla(100, 90%, 70%, 1);
+  --color-blue: #4285f4;
+  --color-darkblue: #4285f440;
+  --color-cyan: #7ce0c4;
+  font-size: calc(70% + 0.8vmin);
+  height: 100%;
+  background-color: var(--color-black-light);
+  margin: 0;
+}
+
+* {
+  font-size: 1rem;
+  /* font-family: 'Source Code Pro', monospace; */
+  box-sizing: border-box;
+  color: var(--color-white);
+}
 
 /* *********************************************** */
 /*                     HEADER                      */
 /* *********************************************** */
+
+body > header {
+  background-color: grey;
+  width: 60vw;
+}
+
+/* *********************************************** */
+/*                     MAIN - PAGES                */
+/* *********************************************** */
+
+main {
+  position: relative;
+}
+
+main section {
+  position: absolute;
+  opacity: 0.8;
+}
+
+main section:nth-child(1),
+main section:nth-child(1) header {
+  background-color: red;
+  z-index: 7; /* first page */
+}
+
+main section:nth-child(2),
+main section:nth-child(2) header {
+  background-color: green;
+  z-index: 6;
+}
+
+main section:nth-child(3),
+main section:nth-child(3) header {
+  background-color: blue;
+  z-index: 5;
+}
+
+main section:nth-child(4),
+main section:nth-child(4) header {
+  background-color: orange;
+  z-index: 4;
+}
+
+main section:nth-child(5),
+main section:nth-child(5) header {
+  background-color: rgb(113, 242, 182);
+  z-index: 3;
+}
+
+main section:nth-child(6),
+main section:nth-child(6) header {
+  background-color: rgb(234, 0, 255);
+  z-index: 2;
+}
+
+main section:nth-child(7),
+main section:nth-child(7) header {
+  background-color: rgb(85, 255, 0);
+  z-index: 1;
+}
+
+main section:hover {
+  z-index: 100;
+  opacity: 1;
+}
+
+/* *********************************************** */
+/*                     MAIN - SUBJECTS             */
+/* *********************************************** */
+
+main section header {
+  border: solid 10px transparent;
+  border-right-color: #fff;
+  width: 183%;
+}
+
+/* *********************************************** */
+/*                     MAIN - DISHES               */
+/* *********************************************** */
+
+main section article {
+  border: 1px dotted black;
+}
 
 /* *********************************************** */
 /*                     FOOTER                      */

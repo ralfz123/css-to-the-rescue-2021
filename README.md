@@ -54,9 +54,19 @@ Screenshot van hoe het login scherm eruit zag:
 
 ## Concept eindbeoordeling
 Ik heb het het volgende concept bedacht:  
-Ik wil de HTML content van het menu pakken en daar een bepaalde huisstijl aan toevoegen. Mijn ideeen gaan nu uit naar een Swiss style design en die wil ik helemaal uitspitten en vervolgens wil ik de menu's op kaartjes weergeven en wanneer je er overheen hovert, dan draait hij om en zie je de ingrediënten erop staan. Overigens wil ik ook nog een soort functie aan kunnen zetten dat het van het rustige swiss design omtovert naar een erg druk design.
+Ik wil de HTML content van het menu pakken en daar een bepaalde huisstijl aan toevoegen. Mijn ideeen gaan nu uit naar een Swiss style design en die wil ik helemaal uitspitten en vervolgens wil ik de gerechten op de kaartjes weergeven en wanneer je er overheen hovert, dan draait hij om en zie je de ingrediënten erop staan. Overigens wil ik ook nog een soort functie aan kunnen zetten dat het van het rustige swiss design omtovert naar een erg druk design.
 
-Voor de layout en design heb ik een Pinterest bord gemaakt waarop ik al mijn ideëen pin: Dit bord is [hier](https://nl.pinterest.com/ralfzonneveld/css-to-the-rescue-design-research/) te vinden.
+## Context
+Mijn keuze voor context is de **`prefers-color-scheme`**, omdat ik het uitdagend vind om 2 verschillende kleurthema's toe te passen. Overigens heb ik dit nog nooit gedaan, maar het lijkt mij zeker een uitdaging om dit een keer te doen. Dit brengt zeker ook wat bij aan de UX. Ik heb al een [resource](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) gevonden van MDN waarin ze alles over dit principe uitleggen.
+
+## Requirements
+De eisen waar mijn product zich aan moet houden zijn:
+- SVG toepassen in shapes, masks én filters
+- Twee kleuren
+
+## Inspiration
+
+Voor de layout en design heb ik een Pinterest bord gemaakt waarop ik al mijn inspiraties pin. Het bord is [hier](https://nl.pinterest.com/ralfzonneveld/css-to-the-rescue-design-research/) te vinden.
 
 De verschillende onderdelen wil ik op deze manier verwerken, dat als je op een gekleurde pagina drukt, dat hij dan zichbaar wordt (zie hieronder). ([Bron afbeelding](https://www.behance.net/gallery/61153051/One-Night-Only))
 
@@ -65,13 +75,22 @@ De verschillende onderdelen wil ik op deze manier verwerken, dat als je op een g
 De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](https://davisonpro.dev/)):
 <img src="https://davisonpro.dev/wp-content/uploads/2019/09/Flipping-Card-HTML-CSS.gif"  width="400px">
 
-De eisen waar mijn product zich aan moet houden zijn:
-- SVG toepassen in shapes, masks én filters
-- Twee kleuren
+## Sketch
+<img src="assets/week1/sketch-concept-v1.jpg"  width="800px">
+
+<img src="assets/week1/sketch-concept-v2.jpg"  width="800px">
+
+### Ideas for developing
+- [ ] Pages must be `input`
+- [ ] CSS programming for :hover over page and then z-index?
+- [ ] Gridbox
+
 
 # Week 2
 # Week 3
 # Week 4
+
+***
 
 ## :gear: Installation
 1. Clone the repository:  
