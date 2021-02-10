@@ -25,13 +25,42 @@ body {
   color: var(--color-white);
 }
 
+body {
+  display: grid;
+  grid-template-areas: 'main header';
+  grid-template-columns: 4fr 1fr;
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 20px;
+}
+
 /* *********************************************** */
 /*                     HEADER                      */
 /* *********************************************** */
 
 body > header {
+  grid-area: header;
+  align-self: center;
+  /* position: fixed; */
+  right: 10px;
+  top: 50px;
   background-color: grey;
-  width: 60vw;
+  /* width: 60vw; */
+  margin: 10px 0px;
+}
+
+body > header > nav {
+  background-color: rgb(63, 63, 63);
+  text-transform: uppercase;
+}
+
+body > header > nav label {
+  background-color: black;
+}
+
+body > header > nav label:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
 
 /* *********************************************** */
@@ -39,83 +68,143 @@ body > header {
 /* *********************************************** */
 
 main {
+  grid-area: main;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 main section {
   position: absolute;
-  opacity: 0.8;
+  max-height: 100vh;
+  padding: 10px;
+  opacity: 0.6;
+  border: 1px solid grey;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-areas: 'dish dish';
+  /* grid-template-columns: 1fr 1fr; */
+  grid-auto-columns: auto;
+  /* grid-auto-rows: minmax(50px, auto); */
+  grid-auto-rows: auto;
+  grid-gap: 15px;
 }
 
-main section:nth-child(1),
-main section:nth-child(1) header {
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #98dffb70;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #98dffb70;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+main section:nth-child(1) {
   background-color: red;
-  z-index: 7; /* first page */
+  z-index: 7;
 }
 
-main section:nth-child(2),
-main section:nth-child(2) header {
+main section:nth-child(2) {
   background-color: green;
   z-index: 6;
 }
 
-main section:nth-child(3),
-main section:nth-child(3) header {
+main section:nth-child(3) {
   background-color: blue;
   z-index: 5;
 }
 
-main section:nth-child(4),
-main section:nth-child(4) header {
+main section:nth-child(4) {
   background-color: orange;
   z-index: 4;
 }
 
-main section:nth-child(5),
-main section:nth-child(5) header {
+main section:nth-child(5) {
   background-color: rgb(113, 242, 182);
   z-index: 3;
 }
 
-main section:nth-child(6),
-main section:nth-child(6) header {
+main section:nth-child(6) {
   background-color: rgb(234, 0, 255);
   z-index: 2;
 }
 
-main section:nth-child(7),
-main section:nth-child(7) header {
+main section:nth-child(7) {
   background-color: rgb(85, 255, 0);
   z-index: 1;
 }
 
 main section:hover {
-  z-index: 100;
+  z-index: 10;
   opacity: 1;
+  /* background-color: black; */
+  color: white;
+}
+
+/* input:checked section {
+  display: block;
+  background-color: red;
+} */
+/* 
+label,
+input[type='radio']:checked {
+  background-color: red;
 }
 
 /* *********************************************** */
 /*                     MAIN - SUBJECTS             */
 /* *********************************************** */
 
-main section header {
+/* main section header {
   border: solid 10px transparent;
   border-right-color: #fff;
   width: 183%;
-}
+} */
 
 /* *********************************************** */
 /*                     MAIN - DISHES               */
 /* *********************************************** */
 
+h2,
+blockquote {
+  text-transform: uppercase;
+  background-color: rgb(28, 8, 8);
+  width: 350px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+main section header {
+  text-transform: uppercase;
+  background-color: rgb(28, 8, 8);
+}
+
 main section article {
-  border: 1px dotted black;
+  display: inline-block;
+  width: 350px;
+  padding: 10px;
+  background-color: grey;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px black;
 }
 
 /* *********************************************** */
 /*                     FOOTER                      */
-/* *********************************************** */
-
-/* *********************************************** */
-/*                     lorem                       */
 /* *********************************************** */

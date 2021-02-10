@@ -76,7 +76,7 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 <img src="https://davisonpro.dev/wp-content/uploads/2019/09/Flipping-Card-HTML-CSS.gif"  width="400px">
 
 ## Sketch
-<img src="assets/week1/sketch-concept-v1.jpg"  width="800px">
+<img src="assets/week1/sketch-concept-v1.jpg"  width="500px">
 
 <img src="assets/week1/sketch-concept-v2.jpg"  width="800px">
 
