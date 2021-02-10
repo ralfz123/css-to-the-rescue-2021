@@ -84,6 +84,8 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 - [ ] Pages must be `input`
 - [ ] CSS programming for :hover over page and then z-index?
 - [ ] Gridbox
+- [ ] Animation
+- [ ] Slider/carousel in stead of paper-magazine
 
 
 # Week 2
