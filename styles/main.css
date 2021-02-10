@@ -81,7 +81,8 @@ main section {
   /* max-height: 100vh; */
   padding: 10px;
   opacity: 0.6;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
+  border-radius: 7px;
   overflow: scroll;
   overflow-x: hidden;
   color: white;
@@ -191,16 +192,6 @@ input[type='radio']:checked {
 /*                     MAIN - DISHES               */
 /* *********************************************** */
 
-/* blockquote {
-  text-transform: uppercase;
-  background-color: rgb(28, 8, 8);
-  width: 350px;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  border-radius: 7px;
-} */
-
 main section header {
   text-transform: uppercase;
   background-color: rgba(24, 18, 18, 0.708);
@@ -210,6 +201,14 @@ main section header {
 
 main section header h2 {
   font-size: 2rem;
+}
+
+main section blockquote {
+  padding: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  background-color: rgba(130, 116, 116, 0.482);
+  border-radius: 7px;
 }
 
 main section article {
@@ -230,6 +229,13 @@ main section article:hover {
   color: rgb(86, 86, 86);
   box-shadow: 2px 5px 15px 0px #17161694;
 }
+
+main section article div{
+  text-align: center;
+  border-top: .5px solid rgba(128, 128, 128, 0.247);
+  align-self: end;
+}
+
 
 /* *********************************************** */
 /*                     FOOTER                      */
