@@ -85,12 +85,18 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 - [ ] CSS programming for :hover over page and then z-index?
 - [ ] Gridbox
 - [ ] Animation
-- [ ] Slider/carousel in stead of paper-magazine
-- [ ] Randomness color subjects
-    - [ ] Media queries
+
 
 
 # Week 2
+#### New Ideas:
+- Slider/carousel in stead of paper-magazine
+- Randomness color subjects
+    - Media queries
+
+
+#### New sketches:
+<img src="assets/week2/sketch_wk2.jpg" width="600px">
 # Week 3
 # Week 4
 
