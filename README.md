@@ -86,6 +86,8 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 - [ ] Gridbox
 - [ ] Animation
 - [ ] Slider/carousel in stead of paper-magazine
+- [ ] Randomness color subjects
+    - [ ] Media queries
 
 
 # Week 2
