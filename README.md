@@ -81,7 +81,6 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 <img src="assets/week1/sketch-concept-v2.jpg"  width="800px">
 
 ### Ideas for developing
-- [ ] Pages must be `input`
 - [ ] CSS programming for :hover over page and then z-index?
 - [ ] Gridbox
 - [ ] Animation
@@ -93,6 +92,14 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 - Slider/carousel in stead of paper-magazine
 - Randomness color subjects
     - Media queries
+- Title project
+- Rotate menu's
+
+## Nav
+The navigation from inputs works now!
+
+To-Do:
+- [ ] Label for input
 
 
 #### New sketches:
