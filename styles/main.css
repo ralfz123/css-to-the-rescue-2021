@@ -36,6 +36,7 @@ body {
   grid-gap: 20px;
   font-family: 'BioRhyme', serif;
   font-weight: 200;
+  text-align: center;
 }
 
 /* *********************************************** */
@@ -45,27 +46,54 @@ body {
 body > header {
   grid-area: header;
   align-self: center;
-  right: 10px;
-  top: 50px;
   background-color: grey;
-  /* width: 60vw; */
-  margin: 10px 0px;
+  width: 60vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
-/* body > header > nav {
-  background-color: rgb(63, 63, 63);
+body > header:hover h1::after {
+  content: 'Stop, eat and go!';
+  color: rgb(180, 180, 180);
+  /* position: absolute;
+  z-index: 10; */
+  /* top: 15px; */
+  /* left: 105px; */
+  font-size: .5rem;
+}
+
+body > header:hover {
+  transform: rotate(2deg);
+}
+
+/* *********************************************** */
+/*                     NAV - INPUT                 */
+/* *********************************************** */
+body input {
+  display: none;
+}
+
+body label {
+  color: white;
+  background: var(--color-black);
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
   text-transform: uppercase;
 }
 
-body > header > nav label {
-  background-color: black;
+body label:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
 }
 
-body > header > nav label:hover {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-} */
+body input:checked + label {
+  background: grey;
+  color: var(--color-white);
+}
 
 /* *********************************************** */
 /*                     MAIN - PAGES                */
@@ -76,6 +104,11 @@ main {
   position: relative;
   /* display: flex; */
   align-items: flex-end;
+  justify-content: center;
+  /* padding: 100px; */
+  /* height: 100vh; */
+  /* margin: 0 auto; */
+  margin: 0px 100px;
 }
 
 main section {
@@ -83,22 +116,32 @@ main section {
   /* max-height: 100vh; */
   padding: 10px 14px;
   opacity: 0.6;
-  /* border: 1px solid grey; */
   border-radius: 7px;
-  /* overflow: scroll; */
   overflow-x: hidden;
   color: white;
   box-shadow: 2px 5px 15px 0px #17161694;
   transition: 0.2s;
 
-  /* display: grid; */
+  display: grid;
   /* grid-template-areas: 'dish dish'; */
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: 16em 16em;
+  /* grid-template-columns: 16em 16em; */
   grid-auto-columns: auto;
   /* grid-auto-rows: minmax(50px, auto); */
   grid-auto-rows: auto;
   grid-gap: 15px;
+  animation: skew 3s infinite;
+  transform: skew(20deg);
+  animation-direction: alternate;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(-20deg);
+  }
 }
 
 /* SCROLLBAR */
@@ -127,53 +170,50 @@ main section {
 main section:nth-child(1) {
   background-color: var(--color-red);
   z-index: 7;
-  width: 40vw;
+  width: 70vw;
 }
 
 main section:nth-child(2) {
   background-color: var(--color-green);
   z-index: 6;
-  width: 50vw;
+  width: 75vw;
 }
 
 main section:nth-child(3) {
   background-color: var(--color-blue);
   z-index: 5;
-  width: 20vw;
+  width: 80vw;
 }
 
 main section:nth-child(4) {
   background-color: var(--color-orange);
   z-index: 4;
-  width: 25vw;
+  width: 60vw;
 }
 
 main section:nth-child(5) {
   background-color: var(--color-cyan);
   z-index: 3;
-  width: 10vw;
+  width: 65vw;
 }
 
 main section:nth-child(6) {
   background-color: var(--color-pink);
   z-index: 2;
-  width: 30vw;
+  width: 60vw;
 }
 
 main section:nth-child(7) {
   background-color: var(--color-green-two);
   z-index: 1;
-  width: 45vw;
+  width: 75vw;
 }
 
-main section:hover {
+/* main section:hover {
   z-index: 10;
   opacity: 1;
-  /* background-color: black; */
   transform: translateY(-10px);
-  /* background: black;
-  color: white; */
-}
+} */
 
 /*  When hover articles, then the content within color will flip */
 /* main section:hover header {
@@ -211,7 +251,6 @@ body input[id='sectionFour']:checked ~ main section:nth-child(4) {
   z-index: 100;
 }
 
-
 body input[id='sectionFive']:checked ~ main section:nth-child(5) {
   opacity: 1;
   z-index: 100;
@@ -222,13 +261,35 @@ body input[id='sectionSix']:checked ~ main section:nth-child(6) {
   z-index: 100;
 }
 
-
 body input[id='sectionSeven']:checked ~ main section:nth-child(7) {
   opacity: 1;
   z-index: 100;
 }
 
+/* Toggle skewing animation checkbox */
 
+body input[id='toggleAnimation']:checked + label {
+  background: purple;
+  color: var(--color-white);}
+
+body input[id='toggleAnimation'] ~ main section {
+  animation-play-state: running;
+}
+
+body input[id='toggleAnimation']:checked ~ main section {
+  animation-play-state: paused;
+}
+
+/* NO animation checkbox */
+body input[id='noAnimation']:checked + label {
+  background: purple;
+  color: var(--color-white);
+}
+
+body input[id='noAnimation']:checked ~ main section {
+  animation: none;
+  transform: skew(0deg);
+}
 /* *********************************************** */
 /*                     MAIN - SUBJECTS             */
 /* *********************************************** */
