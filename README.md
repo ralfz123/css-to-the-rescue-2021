@@ -100,6 +100,8 @@ The navigation from inputs works now!
 
 To-Do:
 - [ ] Label for input
+- [ ] Background image flip/animation.
+- [ ] Dish cards flip
 
 
 #### New sketches:
