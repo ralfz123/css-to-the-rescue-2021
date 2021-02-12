@@ -96,7 +96,9 @@ De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](h
 
 
 #### New sketches:
-<img src="assets/week2/sketch_wk2.jpg" width="600px">
+
+<img src="assets/week2/sketch_wk2.JPG" width="600px" />
+
 # Week 3
 # Week 4
 
