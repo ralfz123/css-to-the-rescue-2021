@@ -108,7 +108,34 @@ To-Do:
 
 <img src="assets/week2/sketch_wk2.JPG" width="600px" />
 
+## Stiekem programmeren met CSS
+Het is me eindelijk gelukt om dmv radio buttons een navigatie te maken en de cards te laten zien. Daarmee was ik erg aan het strugglen, maar nadat Vasilis zei dat ik de inputs in de root van de HTML moet zetten, konden de css selectors er wel bij en zo werkte de feature wel!
+
+image before
+image after
+
+Leren werken met radial-gradient
+
 # Week 3
+labels andere plek want zijn door IDs gelink met hun input.
+
+Idea:
+- Intro scherm met de titel van het restaurant [uitgewerkt]
+
+<img src="assets/week3/app-header.png" width="600px">
+
+
+Nice random effect als je op een card hebt geklikt en daarna op andere. Dan hebben ze allemaal een andere skew effect/richting.
+
+<img src="assets/week3/raar-effect-skew.png" width="600px">
+
+`prefers-color-scheme` - Dark mode [uitgewerkt]:
+- Background dark gradient
+- Text color light (white)
+
+<img src="assets/week3/darkmode-header.png" width="600px">
+<img src="assets/week3/darkmode-main.png" width="600px">
+
 # Week 4
 
 ***
