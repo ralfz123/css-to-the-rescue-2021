@@ -15,12 +15,24 @@ body {
   --color-darkblue: #4285f440;
   --color-cyan: #7ce0c4;
   --color-pink: #ea00ff;
+  --gradient-color-orange: #ee7752;
+  --gradient-color-pink: #e73c7e;
+  --gradient-color-blue: #23a6d5;
+  --gradient-color-green: #23d5ab;
+  --font-header: 'Architects Daughter', cursive;
+  --font-body: 'BioRhyme', serif;
   font-size: calc(70% + 0.8vmin);
   height: 100%;
   background-color: var(--color-white);
   margin: 0;
   overflow-x: hidden;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(
+    -45deg,
+    var(--gradient-color-orange),
+    var(--gradient-color-pink),
+    var(--gradient-color-blue),
+    var(--gradient-color-green)
+  );
   background-size: 400% 400%;
   animation: movingBackground 15s ease infinite;
 }
@@ -44,7 +56,7 @@ body {
 }
 
 body {
-  font-family: 'BioRhyme', serif;
+  font-family: var(--font-body);
   font-weight: 200;
   text-align: center;
 }
@@ -54,17 +66,12 @@ body {
 /* *********************************************** */
 
 body > header {
-  /* width: 40vw; */
   margin: 0 auto;
-  /* border-radius: 10px; */
   transition: 0.2s;
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
-
-/* body > header:hover {
-  transform: scale(-1, 1);
-} */
 
 body > header h1 {
   margin: 0;
@@ -72,13 +79,124 @@ body > header h1 {
   margin: 2em;
   font-size: 5rem;
   text-shadow: 7px 4px 0px white;
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: 0.4s;
 }
 
-/* body > header:hover h1::after {
-  content: 'Stop, eat and go!';
-  color: rgb(180, 180, 180);
-  font-size: 0.5rem;
+body > header h1:hover {
+  text-shadow: none;
+  text-decoration: none;
+  background: red;
+  border-radius: 50%;
+  /* animation: fadeOut 2s .5s infinite alternate; */
+}
+
+/* body > header h1:hover::after {
+  content: ' 🍔';
 } */
+
+/* rocket */
+body > header div.rocket {
+  background: rgb(255, 247, 233);
+  width: 121px;
+  height: 400px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  filter: drop-shadow(0px 0px 5px black);
+  filter: blur(5px);
+  opacity: 0;
+}
+
+.window {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: crimson;
+  left: calc(50% - 25px);
+  top: 40px;
+  border: 2px solid grey;
+}
+
+.fin {
+  position: absolute;
+  z-index: 100;
+  height: 75px;
+  width: 61px;
+  background-color: crimson;
+  margin-top: -20px;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.fin-left {
+  left: -61px;
+  top: calc(100% - 55px);
+  transform: rotateY(180deg);
+}
+
+.fin-right {
+  right: -61px;
+  top: calc(100% - 55px);
+}
+
+.exhaust {
+  position: absolute;
+  z-index: 100;
+  height: 54px;
+  width: 112px;
+  left: 6px;
+  top: calc(113.5% - 55px);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background-color: crimson;
+}
+
+/* has to be the animation of the rocket div */
+@keyframes explode {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  30% {
+    transform: translateX(100px) rotate(-90deg);
+  }
+  40% {
+    transform: translateX(105px) rotate(-70deg);
+  }
+  50% {
+    transform: scale(0.8) translateY(-200px) translateX(-500px) rotate(-60deg);
+  }
+  60% {
+    transform: scale(0.8) translateY(-150px) translateX(-480px) rotate(-50deg);
+  }
+  70% {
+    transform: scale(0.85) translateY(-130px) translateX(-400px) rotate(-40deg);
+  }
+  80% {
+    transform: scale(0.88) translateY(-110px) translateX(-350px) rotate(-30deg);
+  }
+  90% {
+    transform: scale(0.9) translateY(-50px) translateX(-125px) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+
+/* Scroll over h1 tag and rocket appears with animation */
+h1:hover + div.rocket {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.rocket:hover {
+  animation: explode 10s 1s infinite;
+}
 
 body > header p {
   margin: 0;
@@ -105,20 +223,6 @@ body input[type='checkbox']:checked ~ div label {
 }
 
 body > div {
-  /* Nav right to side */
-  /* position: absolute;
-  z-index: 2;
-  width: 8em;
-  padding: 10px;
-  top: 10px;
-  right: 10px;
-  text-align: left;
-  background: #f1f1f1;
-  border: 1px solid grey;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column; */
-
   width: 60em;
   padding: 10px;
   text-align: left;
@@ -178,21 +282,17 @@ main section {
   /* background: radial-gradient(circle at left top, white 2%, transparent 2%),
     radial-gradient(circle at right top, white 2%, transparent 2%),
     radial-gradient(circle at right bottom, white 2%, transparent 2%),
-    radial-gradient(circle at left bottom, white 2%, transparent 2%);
-  background:
+    radial-gradient(circle at left bottom, white 2%, transparent 2%);*/
+  /* background:
     radial-gradient(circle at left top, white 2em, black 2em 2.5em, transparent 2.5em),
     radial-gradient(circle at right top, white 2em, black 2em 2.5em, transparent 2.5em),
     radial-gradient(circle at right bottom, white 2em, black 2em 2.5em, transparent 2.5em),
-    radial-gradient(circle at left bottom, white 2em, black 2em 2.5em, transparent 2.5em); */
+    radial-gradient(circle at left bottom, white 2em, black 2em 2.5em, transparent 2.5em);  */
 
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: auto auto;
-  /* grid-template-columns: 16em 16em; */
-  grid-auto-columns: auto;
-  /* grid-auto-rows: minmax(50px, auto); */
+  /* grid-auto-columns: auto; */
   grid-auto-rows: auto;
-  /* grid-gap: 15px; */
   justify-items: center;
 }
 
@@ -216,17 +316,17 @@ main section {
   bottom: -75px;
 } */
 
-/* MENU CARD BORDER - Otherwise you have to create new <div> */
-/* main section:before {
+/* -- MENU CARD BORDER - Otherwise you have to create new <div> --*/
+main section:before {
   content: ' ';
   position: absolute;
-  z-index: -1;
+  /* z-index: -1; */
   top: 5px;
   left: 5px;
   right: 5px;
   bottom: 5px;
   border: 2px solid #a1a1a1;
-} */
+}
 
 main section:nth-child(1) {
   background-color: var(--color-red);
@@ -388,7 +488,7 @@ main section header {
   text-transform: uppercase;
   background-color: rgba(24, 18, 18, 0.708);
   border-radius: 7px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: var(--font-header);
 }
 
 main section header h2 {
@@ -405,7 +505,7 @@ main section blockquote {
   text-transform: uppercase;
   background-color: rgba(130, 116, 116, 0.482);
   border-radius: 7px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: var(--font-header);
 }
 
 main section blockquote p {
@@ -444,6 +544,9 @@ main section article h3 {
 /*                     FOOTER                      */
 /* *********************************************** */
 
+footer {
+}
+
 /* *********************************************** */
 /*              PREFERS COLOR SCHEME               */
 /* *********************************************** */
@@ -451,11 +554,10 @@ main section article h3 {
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    /* background: none; */
-    /* background-color: var(--color-black-light); */
-    background: linear-gradient(-45deg, #914731, #6f2b45, #174151, #1b4e42);
-    background-size: 400% 400%;
-    animation: movingBackground 15s ease infinite;
+    --gradient-color-orange: #914731;
+    --gradient-color-pink: #6f2b45;
+    --gradient-color-blue: #174151;
+    --gradient-color-green: #1b4e42;
     color: var(--color-white);
   }
 

@@ -121,6 +121,10 @@ labels andere plek want zijn door IDs gelink met hun input.
 
 Idea:
 - Intro scherm met de titel van het restaurant [uitgewerkt]
+- Background image gradient met een animation. Gaaf effect. [uitgewerkt]
+- pointer laser
+- animatie maken --> gelukt als raket en dan hover over h1 en dan zal raket verschijnen en weggaan. --> moet alleen de classes weghalen en de animation mooier maken
+- header interactie met animaties
 
 <img src="assets/week3/app-header.png" width="600px">
 
@@ -133,8 +137,15 @@ Nice random effect als je op een card hebt geklikt en daarna op andere. Dan hebb
 - Background dark gradient
 - Text color light (white)
 
+
+- custom properties teovoeged (veradnerd wnr dark mode)
+
 <img src="assets/week3/darkmode-header.png" width="600px">
 <img src="assets/week3/darkmode-main.png" width="600px">
+
+Het idee gekregen om een `media print` toe te passen zodat ze in restaurant het menu kunnen lezen.
+
+
 
 # Week 4
 
