@@ -22,10 +22,11 @@ body {
   --font-header: 'Architects Daughter', cursive;
   --font-body: 'BioRhyme', serif;
   font-size: calc(70% + 0.8vmin);
+  margin: 0;
   height: 100%;
   background-color: var(--color-white);
-  margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   background: linear-gradient(
     -45deg,
     var(--gradient-color-orange),
@@ -96,8 +97,37 @@ body > header h1:hover {
   content: ' 🍔';
 } */
 
+body > header a {
+  margin: 0;
+  margin: 2em 0em;
+  display: block;
+  text-decoration: none;
+  color: #363636;
+  transition: 0.2s;
+}
+
+body > header a:hover {
+  color: #000000;
+  transform: scale(1.2);
+}
+
+body > header a:after {
+  content: '🔽  🔽  🔽';
+  /* position: relative; */
+  display: block;
+  opacity: 0;
+  /* top: -20px; */
+  transition: all 0.5s;
+}
+
+body > header a:hover:after {
+  opacity: 1;
+  /* top: 0px; */
+}
+
 /* rocket */
 body > header div.rocket {
+  display: none;
   background: rgb(255, 247, 233);
   width: 121px;
   height: 400px;
@@ -545,6 +575,25 @@ main section article h3 {
 /* *********************************************** */
 
 footer {
+  font-size: 0.6em;
+  margin: 1em 0em;
+  color: #515151;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+footer p a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.2s;
+}
+
+footer p a:hover {
+  color: black;
 }
 
 /* *********************************************** */
@@ -598,5 +647,5 @@ footer {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #fff;
+  background: #ffffff90;
 }
