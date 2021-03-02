@@ -19,6 +19,7 @@ body {
   --gradient-color-pink: #e73c7e;
   --gradient-color-blue: #23a6d5;
   --gradient-color-green: #23d5ab;
+  --rocket-color-base: ;
   --font-header: 'Architects Daughter', cursive;
   --font-body: 'BioRhyme', serif;
   font-size: calc(70% + 0.8vmin);
@@ -88,14 +89,13 @@ body > header h1 {
 body > header h1:hover {
   text-shadow: none;
   text-decoration: none;
-  background: red;
-  border-radius: 50%;
   opacity: 0;
 }
 
 body > header h1:hover::after {
-  content: 'Ciao!';
-  display: block;
+  content: ' Ciao!';
+  display: inline-block;
+  margin-left: 10px;
 }
 
 body > header a {
@@ -113,33 +113,28 @@ body > header a:hover {
 
 body > header a:after {
   content: '🔽  🔽  🔽';
-  /* position: relative; */
   display: block;
   opacity: 0;
-  /* top: -20px; */
   transition: all 0.5s;
 }
 
 body > header a:hover:after {
   opacity: 1;
-  /* top: 0px; */
 }
 
 /* rocket */
 body > header div:first-of-type {
-  /* display: none; */
   background: rgb(255, 247, 233);
   width: 121px;
   height: 400px;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  filter: drop-shadow(0px 0px 5px black);
-  filter: blur(5px);
+  filter: blur(20px);
   transform: scale(0.5);
-  transition: .2s;
+  transition: 0.2s;
   opacity: 0;
 }
 
@@ -153,6 +148,9 @@ body > header div:first-of-type div:nth-child(2) {
   background-color: crimson;
   margin-top: -20px;
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  opacity: 1;
+  filter: none;
+  border-radius: 0;
 }
 
 /* fin-left */
@@ -192,45 +190,154 @@ body > header div:first-of-type div:nth-child(4) {
   background-color: crimson;
 }
 
-/* has to be the animation of the rocket div */
-@keyframes explode {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-90deg);
-  }
-  30% {
-    transform: translateX(100px) rotate(-90deg);
-  }
-  40% {
-    transform: translateX(105px) rotate(-70deg);
-  }
-  50% {
-    transform: scale(0.8) translateY(-200px) translateX(-500px) rotate(-60deg);
-  }
-  60% {
-    transform: scale(0.8) translateY(-150px) translateX(-480px) rotate(-50deg);
-  }
-  70% {
-    transform: scale(0.85) translateY(-130px) translateX(-400px) rotate(-40deg);
-  }
-  80% {
-    transform: scale(0.88) translateY(-110px) translateX(-350px) rotate(-30deg);
-  }
-  90% {
-    transform: scale(0.9) translateY(-50px) translateX(-125px) rotate(-20deg);
-  }
-  100% {
-    transform: scale(1) translateY(0px) translateX(0px) rotate(0deg);
-  }
+/*  fire  */
+body > header div:first-of-type div:nth-child(5) {
+  display: block;
+  font-size: 7rem;
+  height: 0.5em;
+  margin-top: 30rem;
+  transform: rotateX(180deg);
+  opacity: 0;
 }
 
-/* Scroll over h1 tag and rocket appears with animation */
+/* Hover over h1 tag and rocket appears with animation */
 body > header h1:hover ~ div:first-of-type {
   opacity: 1;
   filter: blur(0px);
-  animation: explode 10s 1s infinite;
+  animation: tripToSpace 8s 1s ease-in;
+}
+
+/* animation of the rocket div */
+@keyframes tripToSpace {
+  0% {
+    transform: scale(0.5) rotate(0deg);
+  }
+  25% {
+    transform: scale(1) translateY(0px) translateX(0px) rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  31% {
+    transform: rotate(2deg);
+  }
+  32% {
+    transform: rotate(-2deg);
+  }
+  33% {
+    transform: rotate(2deg);
+  }
+  34% {
+    transform: rotate(-2deg);
+  }
+  35% {
+    transform: rotate(2deg);
+  }
+  36% {
+    transform: rotate(-2deg);
+  }
+  37% {
+    transform: rotate(2deg);
+  }
+  38% {
+    transform: rotate(-2deg);
+  }
+  39% {
+    transform: rotate(2deg);
+  }
+  40% {
+    transform: rotate(-2deg);
+  }
+  41% {
+    transform: rotate(2deg);
+  }
+  42% {
+    transform: rotate(-2deg);
+  }
+  43% {
+    transform: rotate(2deg);
+  }
+  44% {
+    transform: rotate(-2deg);
+  }
+  45% {
+    transform: rotate(2deg);
+  }
+  46% {
+    transform: rotate(-2deg);
+  }
+  47% {
+    transform: rotate(2deg);
+  }
+  48% {
+    transform: rotate(-2deg);
+  }
+  49% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: translateY(100px);
+  }
+  70% {
+    transform: translateY(-1000px);
+  }
+  74% {
+    transform: translateY(-800px);
+  }
+  78% {
+    transform: translateY(-600px);
+  }
+  80% {
+    transform: translateY(-400px);
+  }
+  90% {
+    transform: translateY(-300px);
+  }
+  95% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+/* When hover over h1, then the fire/flame comes out the exhaust with a delay */
+body > header h1:hover ~ div:first-of-type div:nth-child(5) {
+  animation: fadeIn linear 2s;
+  animation-delay: 4.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body > header p {
@@ -305,7 +412,6 @@ main {
 
 main section {
   position: absolute;
-  /* max-height: 100vh; */
   padding: 10px 14px;
   opacity: 0.6;
   border-radius: 7px;
@@ -314,19 +420,9 @@ main section {
   box-shadow: 2px 5px 15px 0px #17161694;
   transition: 0.2s;
   animation: skew 3s infinite alternate;
-  /* background: radial-gradient(circle at left top, white 2%, transparent 2%),
-    radial-gradient(circle at right top, white 2%, transparent 2%),
-    radial-gradient(circle at right bottom, white 2%, transparent 2%),
-    radial-gradient(circle at left bottom, white 2%, transparent 2%);*/
-  /* background:
-    radial-gradient(circle at left top, white 2em, black 2em 2.5em, transparent 2.5em),
-    radial-gradient(circle at right top, white 2em, black 2em 2.5em, transparent 2.5em),
-    radial-gradient(circle at right bottom, white 2em, black 2em 2.5em, transparent 2.5em),
-    radial-gradient(circle at left bottom, white 2em, black 2em 2.5em, transparent 2.5em);  */
 
   display: grid;
   grid-template-columns: auto auto;
-  /* grid-auto-columns: auto; */
   grid-auto-rows: auto;
   justify-items: center;
 }
@@ -340,22 +436,10 @@ main section {
   }
 }
 
-/* main section:after {
-  content: '';
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: #fff;
-  right: -75px;
-  bottom: -75px;
-} */
-
 /* -- MENU CARD BORDER - Otherwise you have to create new <div> --*/
 main section:before {
   content: ' ';
   position: absolute;
-  /* z-index: -1; */
   top: 5px;
   left: 5px;
   right: 5px;
@@ -559,16 +643,6 @@ main section article {
   box-shadow: 2px 5px 15px 0px #17161694;
   transition: 0.2s;
   color: white;
-}
-
-main section article:hover {
-  /* transform: scale(1.05);
-  cursor: pointer;
-  background-color: white;
-  color: rgb(86, 86, 86);
-  box-shadow: 2px 5px 15px 0px #17161694; */
-  /* color: white;
-  background: rgb(86, 86, 86); */
 }
 
 main section article h3 {
