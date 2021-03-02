@@ -171,11 +171,11 @@ Er gebeurt een nice random effect als je op een card hebt geklikt en daarna op e
 
 ## Raket maken en animeren :rocket:
 
-Het is gelukt om een vorm te maken (een rakte) en te laten bewegen over het scherm. Op het moment dat je over de titel van website hovert, zal de titel verdwijnen en de raket verschijnen.
+Het is gelukt om een vorm te maken (een raket) en te laten bewegen over het scherm. Op het moment dat je over de titel van website hovert, zal de titel verdwijnen en de raket verschijnen.
 
 <img src="assets/week4/rocket.png" width="800px">
 
-[Hier]() zie je hoe de applicatie werkt en kun je ervaren hoe de raket richting Pluto gaat :rocket:
+[Hier](#gif) zie je hoe de applicatie werkt en kun je ervaren hoe de raket richting Pluto gaat :rocket:
 
 ### Geleerd (in een notendop)
 - Veel animatie (`@keyframes`) probeersels
