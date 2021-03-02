@@ -71,7 +71,7 @@ De verschillende onderdelen wil ik op deze manier verwerken, dat als je op een g
 <img src="https://i.pinimg.com/564x/a7/37/70/a73770947a4b5792d05752ec1d6553f5.jpg" width="400px">
 
 De manier waarop ik de cards wil laten zien staat hieronder ([Bron afbeelding](https://davisonpro.dev/)):
-<img src="https://davisonpro.dev/wp-content/uploads/2019/09/Flipping-Card-HTML-CSS.gif"  width="400px">
+<img src="https://davisonpro.dev/wp-content/uploads/2019/09/Flipping-Card-HTML-CSS.gif"  width="600px">
 
 ## Sketch
 
