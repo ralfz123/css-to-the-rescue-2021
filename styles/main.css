@@ -90,24 +90,24 @@ body > header h1:hover {
   text-decoration: none;
   background: red;
   border-radius: 50%;
-  /* animation: fadeOut 2s .5s infinite alternate; */
+  opacity: 0;
 }
 
-/* body > header h1:hover::after {
-  content: ' 🍔';
-} */
+body > header h1:hover::after {
+  content: 'Ciao!';
+  display: block;
+}
 
 body > header a {
   margin: 0;
   margin: 2em 0em;
   display: block;
   text-decoration: none;
-  color: #363636;
+  color: inherit;
   transition: 0.2s;
 }
 
 body > header a:hover {
-  color: #000000;
   transform: scale(1.2);
 }
 
@@ -126,8 +126,8 @@ body > header a:hover:after {
 }
 
 /* rocket */
-body > header div.rocket {
-  display: none;
+body > header div:first-of-type {
+  /* display: none; */
   background: rgb(255, 247, 233);
   width: 121px;
   height: 400px;
@@ -138,10 +138,38 @@ body > header div.rocket {
   border-top-right-radius: 50%;
   filter: drop-shadow(0px 0px 5px black);
   filter: blur(5px);
+  transform: scale(0.5);
+  transition: .2s;
   opacity: 0;
 }
 
-.window {
+/* fin */
+body > header div:first-of-type div:nth-child(1),
+body > header div:first-of-type div:nth-child(2) {
+  position: absolute;
+  z-index: 100;
+  height: 75px;
+  width: 61px;
+  background-color: crimson;
+  margin-top: -20px;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+/* fin-left */
+body > header div:first-of-type div:nth-child(1) {
+  left: -61px;
+  top: calc(100% - 55px);
+  transform: rotateY(180deg);
+}
+
+/* fin-right */
+body > header div:first-of-type div:nth-child(2) {
+  right: -61px;
+  top: calc(100% - 55px);
+}
+
+/* window */
+body > header div:first-of-type div:nth-child(3) {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -152,28 +180,8 @@ body > header div.rocket {
   border: 2px solid grey;
 }
 
-.fin {
-  position: absolute;
-  z-index: 100;
-  height: 75px;
-  width: 61px;
-  background-color: crimson;
-  margin-top: -20px;
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
-}
-
-.fin-left {
-  left: -61px;
-  top: calc(100% - 55px);
-  transform: rotateY(180deg);
-}
-
-.fin-right {
-  right: -61px;
-  top: calc(100% - 55px);
-}
-
-.exhaust {
+/* exhaust  */
+body > header div:first-of-type div:nth-child(4) {
   position: absolute;
   z-index: 100;
   height: 54px;
@@ -219,12 +227,9 @@ body > header div.rocket {
 }
 
 /* Scroll over h1 tag and rocket appears with animation */
-h1:hover + div.rocket {
+body > header h1:hover ~ div:first-of-type {
   opacity: 1;
   filter: blur(0px);
-}
-
-.rocket:hover {
   animation: explode 10s 1s infinite;
 }
 
@@ -237,7 +242,7 @@ body > header p {
 /* *********************************************** */
 
 body input {
-  display: none;
+  opacity: 0;
 }
 
 /*  Can not select the label after the checked input */
@@ -603,6 +608,14 @@ footer p a:hover {
 @media (prefers-color-scheme: dark) {
   html,
   body {
+    --color-red: #ff0000;
+    --color-green: #55ff00;
+    --color-green-two: #359e00;
+    --color-blue: #0062ff;
+    --color-orange: #ff9500;
+    --color-darkblue: #0062ff40;
+    --color-cyan: #00ffb7;
+    --color-pink: #ff007b;
     --gradient-color-orange: #914731;
     --gradient-color-pink: #6f2b45;
     --gradient-color-blue: #174151;

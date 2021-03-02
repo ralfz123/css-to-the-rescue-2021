@@ -149,6 +149,10 @@ Het idee gekregen om een `media print` toe te passen zodat ze in restaurant het 
 
 # Week 4
 
+Rocket gelukt wnr hover h1
+- readme proces beschrijven
+- screenshots toevoegen
+
 ***
 
 ## :gear: Installation
