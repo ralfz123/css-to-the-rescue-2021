@@ -185,6 +185,7 @@ Het is gelukt om een vorm te maken (een raket) en te laten bewegen over het sche
 - `filter: blur()`
 - `filter: dropshadow()`
 - `media prefers-color-scheme`
+- `clip-path`
 - Custom properties
 - CSS selectoren
 - Krachtigheid CSS
