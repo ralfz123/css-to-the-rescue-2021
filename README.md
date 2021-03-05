@@ -186,6 +186,9 @@ Het is gelukt om een vorm te maken (een raket) en te laten bewegen over het sche
 - `filter: dropshadow()`
 - `media prefers-color-scheme`
 - `clip-path`
+- `text-underline-position`
+- `:after`
+- `repeat(auto-fill, minmax(7em, 1fr))`
 - Custom properties
 - CSS selectoren
 - Krachtigheid CSS
